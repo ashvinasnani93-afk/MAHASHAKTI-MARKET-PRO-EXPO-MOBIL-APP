@@ -1,80 +1,82 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# IDE and editors
-.idea/
-.vscode/
-
-# Dependencies
+# React Native / Expo
 node_modules/
-/node_modules
-/.pnp
-.pnp.js
-.yarn/install-state.gz
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
-
-# Testing
-/coverage
-
-# Next.js
-/.next/
-/out/
-next-env.d.ts
-*.tsbuildinfo
-
-# Production builds
-/build
+.expo/
+.expo-shared/
 dist/
-dist
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+yarn-error.log
+package-lock.json
 
-# Environment files (comprehensive coverage)
+# Metro
+.metro-health-check*
+.metro-cache/
 
-*token.json*
-*credentials.json*
-
-# Logs and debug files
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-dump.rdb
-
-# System files
+# macOS
 .DS_Store
 *.pem
 
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp.*
+.yarn/install-state.gz
+
+# Local env files
+.env*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
 # Python
 __pycache__/
-*pyc*
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
 venv/
-.venv/
+ENV/
+*.egg-info/
 
-# Development tools
-chainlit.md
-.chainlit
-.ipynb_checkpoints/
-.ac
+# Testing
+test_reports/
+pytest/
+coverage/
+.pytest_cache/
 
-# Deployment
-.vercel
+# Backend (exclude from mobile repo)
+backend/
+tests/
 
-# Data and databases
-agenthub/agents/youtube/db
+# Memory & logs
+memory/
+*.log
 
-# Archive files and large assets
-**/*.zip
-**/*.tar.gz
-**/*.tar
-**/*.tgz
-*.pack
-*.deb
-*.dylib
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
 
-# Build caches
+# Temporary files
+*.tmp
+*.temp
 .cache/
 
-# Mobile development
-android-sdk/ 
+# Build outputs
+build/
+dist/
+
+# Expo
+.expo-shared/
+web-build/
