@@ -80,3 +80,7 @@ dist/
 # Expo
 .expo-shared/
 web-build/
+-e 
+# Environment files
+*.env
+*.env.*
