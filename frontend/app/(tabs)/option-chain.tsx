@@ -1,3 +1,3 @@
-import OptionChain from '../src/screens/OptionChain';
+import OptionChain from '../../src/screens/OptionChain';
 
 export default OptionChain;
