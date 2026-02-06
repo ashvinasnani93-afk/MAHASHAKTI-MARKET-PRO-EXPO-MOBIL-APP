@@ -1,0 +1,26 @@
+diff --git a/README.md b/README.md
+index 3786c8a..263181b 100644
+--- a/README.md
++++ b/README.md
+@@ -1 +1,20 @@
+-# Here are your Instructions
++# 🚀 Mahashakti Market Pro - React Native Mobile App
++
++Production-ready stock market trading platform for iOS & Android.
++
++## 📱 Features
++- Dashboard with live indices
++- Trading signals (STRONG_BUY, BUY, WAIT, SELL, STRONG_SELL)
++- Option chain viewer
++- 15-20% explosive move scanner
++- Settings & backend configuration
++
++## 🚀 Quick Start
++```bash
++cd frontend
++yarn install
++yarn start
++```
++
++## 📖 Full Documentation
++See [MOBILE_APP_README.md](./MOBILE_APP_README.md) for complete documentation.
