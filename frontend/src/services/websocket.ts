@@ -1,6 +1,8 @@
 import { io, Socket } from 'socket.io-client';
 
-const WS_URL = process.env.EXPO_PUBLIC_BACKEND_URL || 'https://your-backend-url.com';
+const WS_URL =
+  process.env.EXPO_PUBLIC_API_URL ||
+  'https://mahshakti-market-pro-production.up.railway.app';
 
 class WebSocketService {
   private socket: Socket | null = null;
