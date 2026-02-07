@@ -1,7 +1,9 @@
 import axios, { AxiosInstance } from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const API_BASE_URL = process.env.EXPO_PUBLIC_BACKEND_URL || 'https://your-backend-url.com';
+const API_BASE_URL =
+  process.env.EXPO_PUBLIC_API_URL ||
+  'https://mahshakti-market-pro-production.up.railway.app';
 
 class ApiService {
   private api: AxiosInstance;
