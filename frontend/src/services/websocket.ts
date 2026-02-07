@@ -39,9 +39,18 @@ class WebSocketService {
     });
 
     // Listen for LTP updates
-    this.socket.on('ltp_update', (data) => {
-      this.emit('ltp_update', data);
-    });
+   this.socket.on('ltp_update', (data) => {
+  console.log('📈 LTP Update Received:', data);
+
+  if (!data || !data.symbol) return;
+
+  this.emit('ltp_update', {
+    symbol: data.symbol,
+    ltp: data.ltp,
+    change: data.change,
+    percentChange: data.percentChange,
+  });
+});
 
     // Listen for scanner alerts
     this.socket.on('scanner_alert', (data) => {
@@ -77,11 +86,20 @@ class WebSocketService {
   }
 
   // Subscribe to symbol LTP
-  subscribeToSymbol(symbol: string) {
-    if (this.socket && this.isConnected) {
-      this.socket.emit('subscribe', { symbol });
-    }
+ subscribeToSymbol(symbol: string) {
+  if (!this.socket) return;
+
+  const subscribeAction = () => {
+    console.log('📡 Subscribing to:', symbol);
+    this.socket?.emit('subscribe_symbol', { symbol });
+  };
+
+  if (this.isConnected) {
+    subscribeAction();
+  } else {
+    this.socket.once('connect', subscribeAction);
   }
+}
 
   // Unsubscribe from symbol
   unsubscribeFromSymbol(symbol: string) {
